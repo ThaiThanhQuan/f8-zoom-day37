@@ -1,8 +1,11 @@
-
+import AppRoutes from "./components/AppRoutes"
+import GlobalStyles from "./components/GlobalStyles"
 function App() {
 
   return (
-    <h1>APp</h1>
+      <GlobalStyles>
+        <AppRoutes />
+      </GlobalStyles>
   )
 }
 
