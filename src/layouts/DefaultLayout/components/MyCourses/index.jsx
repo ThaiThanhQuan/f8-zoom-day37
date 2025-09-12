@@ -59,7 +59,7 @@ function MyCourses() {
            {isOpen && 
            
                <div className={clsx(styles.dropdown)}>
-                    <div className={clsx(styles.content)}>
+                    <div className={clsx(styles.dropdowncontent )}>
                     <div className={clsx(styles.contentheader)}>
                         <h6 className={clsx(styles.contenttitle)}>Khóa học của tôi</h6>
                         <a className={clsx(styles.cotentbtn)}>Xem tất cả</a>

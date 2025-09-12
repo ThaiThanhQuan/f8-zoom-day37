@@ -1,26 +1,3 @@
-.header{
-    position: fixed;
-    justify-content: space-between;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 20;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    padding: 0 28px;
-    height: 66px;
-    border-bottom: 1px solid #e8ebed;
-    background-color: #fff;
-    font-size: 14px;
-}
-.input{
-    flex: 1;
-}
-.contentinformation{
-    display: flex;
-    align-items: center;
-}
 
 .content{
     margin-top: 100px;
