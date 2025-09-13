@@ -1,5 +1,6 @@
 import clsx from "clsx";
 import PropTypes from "prop-types";
+import { CircleX } from 'lucide-react';
 
 import styles from './Modal.module.scss';
 import { useEffect } from "react";
@@ -64,19 +65,13 @@ function Modal({
     return ( 
         <div className={clsx(styles.modal)}>
             <div className={clsx(styles.content, className)}>
-                {/* Close button */}
-                <button
-                    className={styles.closeBtn}
-                    onClick={handleRequestClose}
-                >
-                    &times;
-                </button>
-
-                {/* Children */}
+                
                 <div className={styles.body}>{children}</div>
+
+                   <CircleX className={styles.closeBtn}
+                    onClick={handleRequestClose}/>
             </div>
 
-            {/* Overlay */}
             <div
                 className={clsx(styles.overlay, overlayClassName)}
                 onClick={() => {

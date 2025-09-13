@@ -26,10 +26,7 @@
     max-height: calc(90vh - 66px);
     width: 389px;
     overflow: hidden; 
-}
-.dropdownContent {
-  max-height: calc(90vh - 66px);
-  overflow-y: auto;
+     overflow-y: auto;
   overscroll-behavior: contain;
 }
 .contentheader{

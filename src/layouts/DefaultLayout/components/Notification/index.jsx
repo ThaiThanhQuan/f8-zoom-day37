@@ -1,8 +1,9 @@
 import { useState } from "react";
-
 import clsx from "clsx";
-import styles from './Notification.module.scss'
 import {Bell } from "lucide-react";
+
+import styles from './Notification.module.scss'
+import defaultAvatar from '../../../../assets/images/default_avatar.webp'
 
 
 function Notification() {
@@ -14,36 +15,43 @@ function Notification() {
             type: "course",
             title: "Bạn đã hoàn thành bài học mới: Vòng lặp trong JavaScript",
             time: "5 phút trước",
-            avatar: "https://fullstack.edu.vn/assets/feedback-0-BFb1fhaR.jpg",
+            avatar: defaultAvatar,
         },
         {
             id: 2,
             type: "system",
             title: "Cập nhật bài mới trong khóa học NodeJS & Express",
             time: "30 phút trước",
-            avatar: "https://fullstack.edu.vn/assets/feedback-0-BFb1fhaR.jpg",
+            avatar: defaultAvatar,
         },
         {
             id: 3,
             type: "message",
             title: "Tin nhắn từ giảng viên: Hãy xem lại bài tập tuần 3 nhé!",
             time: "1 giờ trước",
-            avatar: "https://fullstack.edu.vn/assets/feedback-0-BFb1fhaR.jpg",
+            avatar: defaultAvatar,
         },
         {
             id: 4,
             type: "course",
             title: "Khóa học ReactJS có bài học mới: Hooks nâng cao và Context API",
             time: "2 giờ trước",
-            avatar: "https://fullstack.edu.vn/assets/feedback-0-BFb1fhaR.jpg",
+            avatar: defaultAvatar,
         },
         {
             id: 5,
             type: "system",
             title: "Khuyến mãi khóa học Frontend: Giảm 50% toàn bộ khóa học",
             time: "Hôm qua",
-            avatar: "https://fullstack.edu.vn/assets/feedback-0-BFb1fhaR.jpg",
-        },
+            avatar: defaultAvatar,
+        }, 
+        {
+            id: 6,
+            type: "system",
+            title: "Thông báo backend update",
+            time: "Hôm nay",
+            avatar: defaultAvatar,
+        }
         ];
 
 

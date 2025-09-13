@@ -1,6 +1,5 @@
 import { useState } from "react";
 
-import { Search, BookOpen, FileText, PlayCircle } from "lucide-react";
 import clsx from "clsx";
 import styles from './UserMenu.module.scss'
 
@@ -10,9 +9,9 @@ function UserMenu() {
     return ( 
        <div className={clsx(styles.wrapper)}>
             <div 
-                 tabIndex={0}
+                tabIndex={0}
                 onClick={() => setIsOpen(true)}
-                 onBlur={() => setIsOpen(false)}    
+                onBlur={() => setIsOpen(false)}    
             >
                 <img className={clsx(styles.img)} src="https://files.fullstack.edu.vn/f8-prod/user_photos/365142/65254ece15fed.jpg"/>
            

@@ -6,6 +6,16 @@ import styles from './SearchForm.module.scss'
 
 function SearchForm() {
     const [isOpen, setIsOpen] = useState(false)
+    const [searchValue, setSearchValue] = useState('')
+    const [showSearchValue, setShowSearchValue] = useState(false)
+
+     const handleChange = (e) => {
+        const searchValue = e.target.value;
+        if (!searchValue.startsWith(' ')) {
+            setSearchValue(searchValue);
+            setShowSearchValue(true)
+        }
+    };
 
     const courses = [
         {id: 1, title: "Khoa hoc Javascript co ban", desc: "Khoa hoc cho nguoi moi bat dau"},
@@ -24,21 +34,28 @@ function SearchForm() {
         {id: 2, title: "HTML DOM", desc: "Thao tac DOM voi JS"},
     ]
 
+    
+
     return ( 
        <div className={clsx(styles.wrapper)}>
-            <div className={clsx(styles.search)}>
-                <Search size={20} className={clsx(styles.icon)} />
-                <input 
-                    type="text"
-                    placeholder="Tìm kiếm khóa học, bài viết, video, ..."
-                    className={clsx(styles.input)}
-                    onFocus={() => setIsOpen(true)}
-                    onBlur={() => setIsOpen(false)}
-                > 
-                </input>
-            </div>
+                <div className={clsx(styles.searchinput)}>
+                    <Search size={20} className={clsx(styles.icon)} />
+                    <input 
+                        type="text"
+                        placeholder="Tìm kiếm khóa học, bài viết, video, ..."
+                        className={clsx(styles.input)}
+                        value={searchValue}
+                        onChange={handleChange}
+                        onFocus={() => setIsOpen(true)}
+                        onBlur={() => setIsOpen(false)}
+                    > 
+                    </input>
 
-            {isOpen && <div className={clsx(styles.dropdown)}>
+                {isOpen && <div className={clsx(styles.dropdown)}>
+                    {showSearchValue && <div className={clsx(styles.text)}>
+                        <Search size={15} className={clsx(styles.texticon)} />
+                        <p>Kết quả cho {`'${searchValue}'`}</p>
+                    </div>}
                 {/* Khóa học */}
                 <div className={clsx(styles.section)}>
                     <div className={clsx(styles.sectionheader)}>
@@ -90,11 +107,8 @@ function SearchForm() {
                     ))}
                 </div>
         </div>}
-            
-    
-    
-       </div>
-
+                </div>
+            </div>
      );
 }
 

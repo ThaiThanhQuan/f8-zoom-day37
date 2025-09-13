@@ -1,5 +1,33 @@
-
 .content{
-    margin-top: 100px;
+    margin-top: 110px;
+    margin-left: 50px;
     color: black;
+    display: flex;
+}
+.text{
+    margin: auto;
+}
+.navitem{
+    display: flex;
+    flex-direction: column; 
+    margin-right: 50px;
+}
+
+.nav{
+    text-decoration: none;
+    color: #000;
+    opacity: 0.5;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 18px;
+    padding: 20px;
+    margin-bottom: 20px;
+
+    transition: color .2s ease, transform .2s ease;
+
+    &:hover{
+        cursor: pointer;
+        opacity: 1;
+        transform: translateY(-4px);
+    }
 }

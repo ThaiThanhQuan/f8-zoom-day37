@@ -13,11 +13,11 @@ function Header() {
         <div className={clsx(styles.header)}>
              <AppLogo />
             <div className={clsx(styles.input)}> <SearchForm /></div>
-                <div className={clsx(styles.contentinformation)}>
-                    <MyCourses />
-                    <Notification />
-                    <UserMenu />
-                </div>
+            <div className={clsx(styles.contentinformation)}>
+                <MyCourses />
+                <Notification />
+                <UserMenu />
+            </div>
         </div>
      );
 }
